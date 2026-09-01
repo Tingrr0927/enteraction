@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ENTERACTION — Speak Up, Keep Speaking</title>
+<meta name="description" content="ENTERACTION is a friendly, low-pressure all-English space to help you build a speaking habit and grow your confidence.">
+
+<!-- Open Graph -->
+<meta property="og:title" content="ENTERACTION — Speak Up, Keep Speaking">
+<meta property="og:description" content="A friendly, low-pressure all-English space to help you build a speaking habit and grow your confidence.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/logo.png">
+
+<link rel="icon" href="assets/logo.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+TC:wght@400;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#top" class="brand">
+      <img src="assets/logo.png" alt="ENTERACTION" class="brand-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex'">
+      <span class="brand-fallback" style="display:none">EA</span>
+      <span class="brand-name">ENTERACTION</span>
+    </a>
+    <nav class="tab-nav">
+      <button type="button" class="tab-btn active" data-tab="about" data-i18n="tabs.about">About</button>
+      <span class="tab-divider" aria-hidden="true"></span>
+      <button type="button" class="tab-btn" data-tab="activities" data-i18n="tabs.activities">Activities</button>
+      <span class="tab-divider" aria-hidden="true"></span>
+      <button type="button" class="tab-btn" data-tab="ability" data-i18n="tabs.ability">Ability</button>
+      <span class="tab-divider" aria-hidden="true"></span>
+      <button type="button" class="tab-btn" data-tab="guidelines" data-i18n="tabs.guidelines">Guidelines</button>
+      <span class="tab-divider" aria-hidden="true"></span>
+      <button type="button" class="tab-btn" data-tab="membership" data-i18n="tabs.membership">Membership</button>
+    </nav>
+    <div class="nav-links">
+      <a href="https://discord.gg/d8cgv5xPS" target="_blank" rel="noopener" class="btn btn-discord btn-small" data-i18n="nav.discord">Join Discord</a>
+      <button type="button" id="lang-toggle" class="lang-toggle" aria-label="切換為中文">中文</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <section id="about" class="tab-panel active">
+    <div class="hero">
+      <div class="hero-inner">
+        <img src="assets/logo.png" alt="ENTERACTION logo" class="hero-logo" onerror="this.style.display='none'; document.querySelector('.hero-fallback').style.display='flex'">
+        <div class="hero-fallback" style="display:none">
+          <span class="hero-fallback-mark">EA</span>
+          <span class="hero-fallback-name">ENTERACTION</span>
+        </div>
+
+        <h1 data-i18n="hero.title">Speak Up. Keep Speaking.</h1>
+        <p class="hero-sub" data-i18n="hero.sub">ENTERACTION is a friendly, low-pressure all-English space designed to help you build a real speaking habit and grow your confidence, one conversation at a time. It's not about perfect English — it's about being willing to speak.</p>
+
+        <a href="https://discord.gg/d8cgv5xPS" target="_blank" rel="noopener" class="btn btn-discord btn-large">
+          <svg class="discord-icon" viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
+            <path d="M20.317 4.369A19.791 19.791 0 0 0 15.885 3c-.211.375-.444.884-.608 1.287a18.27 18.27 0 0 0-5.487 0A12.64 12.64 0 0 0 9.182 3a19.736 19.736 0 0 0-4.435 1.369C1.676 8.845.913 13.21 1.295 17.51a19.9 19.9 0 0 0 5.993 3.03c.484-.66.914-1.362 1.284-2.098a12.9 12.9 0 0 1-2.023-.978c.17-.124.336-.253.497-.386 3.902 1.804 8.13 1.804 11.987 0 .163.133.329.262.497.386-.646.387-1.324.712-2.023.978.37.736.8 1.438 1.284 2.098a19.83 19.83 0 0 0 6.001-3.03c.451-4.988-.762-9.313-3.475-13.141ZM8.62 14.813c-1.183 0-2.15-1.086-2.15-2.42 0-1.335.949-2.421 2.15-2.421 1.21 0 2.176 1.095 2.15 2.42 0 1.335-.94 2.421-2.15 2.421Zm6.775 0c-1.183 0-2.15-1.086-2.15-2.42 0-1.335.949-2.421 2.15-2.421 1.211 0 2.176 1.095 2.15 2.42 0 1.335-.939 2.421-2.15 2.421Z"/>
+          </svg>
+          <span data-i18n="hero.cta">Join Our Discord</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="about">
+      <div class="section-inner reveal">
+        <h2 data-i18n="about.title">About ENTERACTION</h2>
+        <p data-i18n="about.p1">
+          This is an English-speaking community built around one simple idea: dare to speak, and keep speaking.
+          We're creating a friendly, low-pressure all-English environment to help members build a speaking habit
+          and gradually gain confidence in expressing themselves.
+        </p>
+        <p data-i18n="about.p2">
+          Conversations are held mostly in English — if you're not sure how to say something, feel free to use AI
+          or translation tools for help. What matters isn't perfect English, it's being willing to try.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="activities" class="tab-panel features">
+    <div class="section-inner">
+      <h2 class="reveal" data-i18n="activities.title">What We Do</h2>
+      <div class="activity-list">
+        <div class="activity-item reveal">
+          <div class="activity-text">
+            <div class="activity-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            </div>
+            <h3 data-i18n="activities.item1.title">Casual Chats & Life Sharing</h3>
+            <p data-i18n="activities.item1.desc">Talk about everyday life in English, in a relaxed and easygoing way.</p>
+          </div>
+          <div class="activity-visual">
+            <div class="activity-visual-inner">
+              <svg viewBox="0 0 300 220" class="activity-illustration" aria-hidden="true">
+                <circle cx="95" cy="110" r="26" fill="#f2a54a"/>
+                <path d="M65 210 C65 165 70 136 95 136 C120 136 125 165 125 210 Z" fill="#f2a54a"/>
+                <circle cx="205" cy="110" r="26" fill="#2947c9"/>
+                <path d="M175 210 C175 165 180 136 205 136 C230 136 235 165 235 210 Z" fill="#2947c9"/>
+                <rect x="105" y="28" width="90" height="48" rx="16" fill="#ffffff"/>
+                <path d="M140 76 L150 94 L160 76 Z" fill="#ffffff"/>
+                <circle cx="127" cy="52" r="5" fill="#2947c9"/>
+                <circle cx="150" cy="52" r="5" fill="#2947c9"/>
+                <circle cx="173" cy="52" r="5" fill="#2947c9"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <hr class="list-divider">
+
+        <div class="activity-item reveal">
+          <div class="activity-text">
+            <div class="activity-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            </div>
+            <h3 data-i18n="activities.item2.title">Weekly Themed Discussions</h3>
+            <p data-i18n="activities.item2.desc">Share ideas and perspectives around a different topic each week.</p>
+          </div>
+          <div class="activity-visual">
+            <div class="activity-visual-inner">
+              <svg viewBox="0 0 300 220" class="activity-illustration" aria-hidden="true">
+                <ellipse cx="150" cy="176" rx="95" ry="28" fill="#e3e8f7"/>
+                <circle cx="80" cy="140" r="20" fill="#f2a54a"/>
+                <path d="M55 200 C55 158 60 140 80 140 C100 140 105 158 105 200 Z" fill="#f2a54a"/>
+                <circle cx="150" cy="110" r="22" fill="#2947c9"/>
+                <path d="M122 200 C122 128 128 110 150 110 C172 110 178 128 178 200 Z" fill="#2947c9"/>
+                <circle cx="220" cy="140" r="20" fill="#4f77f0"/>
+                <path d="M195 200 C195 158 200 140 220 140 C240 140 245 158 245 200 Z" fill="#4f77f0"/>
+                <rect x="118" y="22" width="64" height="40" rx="12" fill="#ffffff"/>
+                <circle cx="150" cy="38" r="8" fill="#f2a54a"/>
+                <rect x="146" y="47" width="8" height="6" rx="2" fill="#dfe4f5"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <hr class="list-divider">
+
+        <div class="activity-item reveal">
+          <div class="activity-text">
+            <div class="activity-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+            </div>
+            <h3 data-i18n="activities.item3.title">Short Talks & Personal Stories</h3>
+            <p data-i18n="activities.item3.desc">Practice expressing yourself in English by sharing your own stories.</p>
+          </div>
+          <div class="activity-visual">
+            <div class="activity-visual-inner">
+              <svg viewBox="0 0 300 220" class="activity-illustration" aria-hidden="true">
+                <path d="M150 14 L230 200 L70 200 Z" fill="#eef1fb"/>
+                <circle cx="150" cy="96" r="26" fill="#2947c9"/>
+                <path d="M115 200 C115 150 122 122 150 122 C178 122 185 150 185 200 Z" fill="#2947c9"/>
+                <circle cx="70" cy="188" r="10" fill="#f2a54a"/>
+                <circle cx="104" cy="196" r="10" fill="#4f77f0"/>
+                <circle cx="196" cy="196" r="10" fill="#4f77f0"/>
+                <circle cx="230" cy="188" r="10" fill="#f2a54a"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <hr class="list-divider">
+
+        <div class="activity-item reveal">
+          <div class="activity-text">
+            <div class="activity-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <h3 data-i18n="activities.item4.title">Cultural Exchange</h3>
+            <p data-i18n="activities.item4.desc">Get to know different cultures and broaden your global perspective.</p>
+          </div>
+          <div class="activity-visual">
+            <div class="activity-visual-inner">
+              <svg viewBox="0 0 300 220" class="activity-illustration" aria-hidden="true">
+                <circle cx="150" cy="118" r="76" fill="#4f77f0"/>
+                <ellipse cx="150" cy="118" rx="76" ry="26" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.6"/>
+                <path d="M150 42 C110 70 110 166 150 194" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.6"/>
+                <path d="M150 42 C190 70 190 166 150 194" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.6"/>
+                <line x1="74" y1="118" x2="226" y2="118" stroke="#ffffff" stroke-width="2" opacity="0.6"/>
+                <path d="M92 70 C92 58 100 50 112 50 C124 50 132 58 132 70 C132 84 112 100 112 100 C112 100 92 84 92 70 Z" fill="#f2a54a"/>
+                <circle cx="112" cy="70" r="8" fill="#ffffff"/>
+                <path d="M168 150 C168 138 176 130 188 130 C200 130 208 138 208 150 C208 164 188 180 188 180 C188 180 168 164 168 150 Z" fill="#f2a54a"/>
+                <circle cx="188" cy="150" r="8" fill="#ffffff"/>
+                <path d="M120 78 Q150 110 180 158" fill="none" stroke="#f2a54a" stroke-width="2" stroke-dasharray="4 5"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <hr class="list-divider">
+
+        <div class="activity-item reveal">
+          <div class="activity-text">
+            <div class="activity-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            </div>
+            <h3 data-i18n="activities.item5.title">Books & Games Sessions</h3>
+            <p data-i18n="activities.item5.desc">Practice speaking through English books, games, and other themed activities.</p>
+          </div>
+          <div class="activity-visual">
+            <div class="activity-visual-inner">
+              <svg viewBox="0 0 300 220" class="activity-illustration" aria-hidden="true">
+                <path d="M150 60 C150 50 140 44 100 44 C72 44 60 52 60 62 L60 168 C60 158 72 150 100 150 C140 150 150 156 150 166 Z" fill="#4f77f0"/>
+                <path d="M150 60 C150 50 160 44 200 44 C228 44 240 52 240 62 L240 168 C240 158 228 150 200 150 C160 150 150 156 150 166 Z" fill="#2947c9"/>
+                <line x1="150" y1="62" x2="150" y2="164" stroke="#ffffff" stroke-width="2" opacity="0.5"/>
+                <line x1="78" y1="72" x2="128" y2="72" stroke="#ffffff" stroke-width="2" opacity="0.5"/>
+                <line x1="78" y1="88" x2="120" y2="88" stroke="#ffffff" stroke-width="2" opacity="0.5"/>
+                <line x1="78" y1="104" x2="126" y2="104" stroke="#ffffff" stroke-width="2" opacity="0.5"/>
+                <g transform="translate(212, 118) rotate(18)">
+                  <rect x="-20" y="-20" width="40" height="40" rx="8" fill="#f2a54a"/>
+                  <circle cx="-8" cy="-8" r="3.5" fill="#ffffff"/>
+                  <circle cx="8" cy="8" r="3.5" fill="#ffffff"/>
+                  <circle cx="8" cy="-8" r="3.5" fill="#ffffff"/>
+                  <circle cx="-8" cy="8" r="3.5" fill="#ffffff"/>
+                  <circle cx="0" cy="0" r="3.5" fill="#ffffff"/>
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="activities-note" data-i18n="activities.note">
+        Before each session, we'll share the topic and some simple prep materials in advance so everyone has time to get ready.
+      </p>
+    </div>
+  </section>
+
+  <section id="ability" class="tab-panel ability">
+    <div class="section-inner">
+      <h2 class="reveal" data-i18n="ability.title">How ENTERACTION Helps You Grow</h2>
+      <p class="ability-subtitle reveal" data-i18n="ability.subtitle">Every ENTERACTION activity is built on these growth principles:</p>
+
+      <div class="row-list">
+        <div class="row-item reveal">
+          <div class="row-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 17 9 11 13 15 21 7"/><polyline points="14 7 21 7 21 14"/></svg>
+          </div>
+          <div class="row-text">
+            <h3><span data-i18n="ability.item1.title">Learn at Your Own Pace</span></h3>
+            <p data-i18n="ability.item1.desc">There's no pressure to speak perfectly or immediately — grow your English at whatever pace feels comfortable for you.</p>
+          </div>
+        </div>
+
+        <hr class="list-divider">
+
+        <div class="row-item reveal">
+          <div class="row-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+          </div>
+          <div class="row-text">
+            <h3><span data-i18n="ability.item2.title">Practice by Doing</span></h3>
+            <p data-i18n="ability.item2.desc">Build real speaking confidence through free chats, weekly discussions, short talks, and themed activities — not textbook drills.</p>
+          </div>
+        </div>
+
+        <hr class="list-divider">
+
+        <div class="row-item reveal">
+          <div class="row-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          </div>
+          <div class="row-text">
+            <h3><span data-i18n="ability.item3.title">Grow Together, No Judgment</span></h3>
+            <p data-i18n="ability.item3.desc">Everyone's English level is welcome here. We support each other with patience instead of correction or criticism.</p>
+          </div>
+        </div>
+
+        <hr class="list-divider">
+
+        <div class="row-item reveal">
+          <div class="row-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="row-text">
+            <h3><span data-i18n="ability.item4.title">Learn From Fellow Members</span></h3>
+            <p data-i18n="ability.item4.desc">Pick up new expressions, cultural insights, and confidence by learning alongside members from different backgrounds.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="guidelines" class="tab-panel guidelines">
+    <div class="section-inner">
+      <h2 class="reveal" data-i18n="guidelines.title">Community Guidelines</h2>
+      <div class="guideline-grid">
+        <div class="guideline-item reveal">
+          <div class="row-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 8.6c0 4.4-8.8 9.4-8.8 9.4s-8.8-5-8.8-9.4a4.6 4.6 0 0 1 8.8-1.9 4.6 4.6 0 0 1 8.8 1.9z"/></svg>
+          </div>
+          <h3 data-i18n="guidelines.item1.title">Respect Each Other</h3>
+          <p data-i18n="guidelines.item1.desc">No criticizing or mocking anyone's English level.</p>
+        </div>
+
+        <div class="guideline-item reveal">
+          <div class="row-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+          <h3 data-i18n="guidelines.item2.title">Respect Privacy</h3>
+          <p data-i18n="guidelines.item2.desc">Be mindful of privacy when sharing personal experiences.</p>
+        </div>
+
+        <div class="guideline-item reveal">
+          <div class="row-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 20 6 V12 C20 17 16.5 20.5 12 22 C7.5 20.5 4 17 4 12 V6 Z"/></svg>
+          </div>
+          <h3 data-i18n="guidelines.item3.title">Keep It Safe & Fun</h3>
+          <p data-i18n="guidelines.item3.desc">Let's keep the space safe, comfortable, and fun together.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="membership" class="tab-panel membership">
+    <div class="section-inner">
+      <h2 class="reveal" data-i18n="membership.title">Join Our Community</h2>
+      <p class="membership-subtitle reveal" data-i18n="membership.subtitle">Pick whichever platform you're most comfortable with.</p>
+
+      <div class="membership-grid">
+        <div class="membership-card reveal">
+          <div class="membership-icon membership-icon-discord">
+            <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor" aria-hidden="true">
+              <path d="M20.317 4.369A19.791 19.791 0 0 0 15.885 3c-.211.375-.444.884-.608 1.287a18.27 18.27 0 0 0-5.487 0A12.64 12.64 0 0 0 9.182 3a19.736 19.736 0 0 0-4.435 1.369C1.676 8.845.913 13.21 1.295 17.51a19.9 19.9 0 0 0 5.993 3.03c.484-.66.914-1.362 1.284-2.098a12.9 12.9 0 0 1-2.023-.978c.17-.124.336-.253.497-.386 3.902 1.804 8.13 1.804 11.987 0 .163.133.329.262.497.386-.646.387-1.324.712-2.023.978.37.736.8 1.438 1.284 2.098a19.83 19.83 0 0 0 6.001-3.03c.451-4.988-.762-9.313-3.475-13.141ZM8.62 14.813c-1.183 0-2.15-1.086-2.15-2.42 0-1.335.949-2.421 2.15-2.421 1.21 0 2.176 1.095 2.15 2.42 0 1.335-.94 2.421-2.15 2.421Zm6.775 0c-1.183 0-2.15-1.086-2.15-2.42 0-1.335.949-2.421 2.15-2.421 1.211 0 2.176 1.095 2.15 2.42 0 1.335-.939 2.421-2.15 2.421Z"/>
+            </svg>
+          </div>
+          <h3 data-i18n="membership.discord.title">Discord</h3>
+          <p data-i18n="membership.discord.desc">Real-time chat, voice hangouts, and where most of our weekly activities happen.</p>
+          <a href="https://discord.gg/d8cgv5xPS" target="_blank" rel="noopener" class="btn btn-discord btn-small">
+            <span data-i18n="membership.discord.cta">Join Discord</span>
+          </a>
+        </div>
+
+        <div class="membership-card reveal">
+          <div class="membership-icon membership-icon-line">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor" aria-hidden="true">
+              <path d="M21 10.7C21 6 16.5 2.5 12 2.5S3 6 3 10.7c0 3.9 3.6 7.1 8.4 7.8.3.1.8.3.9.6.1.3.1.7 0 1l-.1.9c0 .3-.2 1 .9.6 1.1-.5 5.9-3.5 8-6 1.4-1.6 2-3.2 2-4.9ZM8.6 13.2H7c-.2 0-.4-.2-.4-.4V9.1c0-.2.2-.4.4-.4s.4.2.4.4v3.3h1.2c.2 0 .4.2.4.4s-.2.4-.4.4Zm1.7-.4c0 .2-.2.4-.4.4s-.4-.2-.4-.4V9.1c0-.2.2-.4.4-.4s.4.2.4.4v3.7Zm4.2 0c0 .2-.1.3-.3.4h-.1c-.1 0-.2 0-.3-.1l-1.9-2.6v2.3c0 .2-.2.4-.4.4s-.4-.2-.4-.4V9.1c0-.2.1-.3.3-.4h.1c.1 0 .2 0 .3.1l1.9 2.6V9.1c0-.2.2-.4.4-.4s.4.2.4.4v3.7Zm2.9-2.3c.2 0 .4.2.4.4s-.2.4-.4.4h-1.6v1h1.6c.2 0 .4.2.4.4s-.2.4-.4.4h-2c-.2 0-.4-.2-.4-.4V9.1c0-.2.2-.4.4-.4h2c.2 0 .4.2.4.4s-.2.4-.4.4h-1.6v1Z"/>
+            </svg>
+          </div>
+          <h3 data-i18n="membership.line.title">LINE</h3>
+          <p data-i18n="membership.line.desc">Prefer LINE for daily chat? Scan the QR code below to join our group.</p>
+          <img src="assets/line-qrcode.jpg" alt="ENTERACTION LINE group QR code" class="membership-qr" onerror="this.style.display='none'">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="section-inner cta-inner reveal">
+      <h2 data-i18n="cta.title">Ready to Speak Up?</h2>
+      <p data-i18n-html="cta.body">
+        No matter your English level, if you want to practice speaking, meet new people, or explore English-speaking culture, you're very welcome to join!<br>
+        We're still working out the schedule, platform, and future topics — and we'll invite everyone to help shape them.<br>
+        We can't wait to speak English with you and make it a natural part of everyday life.
+      </p>
+      <a href="https://discord.gg/d8cgv5xPS" target="_blank" rel="noopener" class="btn btn-discord btn-large" data-i18n="cta.button">Join Our Discord</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="section-inner footer-inner">
+    <span>© <span id="year"></span> ENTERACTION. <span data-i18n="footer.rights">All rights reserved.</span></span>
+    <a href="https://discord.gg/d8cgv5xPS" target="_blank" rel="noopener">Discord</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
