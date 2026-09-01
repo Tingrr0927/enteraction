@@ -44,6 +44,35 @@ if ("IntersectionObserver" in window && !prefersReducedMotion) {
   scrollRevealEls.forEach((el) => el.classList.add("is-visible"));
 }
 
+/* Mobile menu — the tab row becomes a dropdown toggled by a hamburger button */
+const menuToggle = document.querySelector(".menu-toggle");
+const mobileTabNav = document.getElementById("tab-nav");
+
+function closeMobileMenu() {
+  if (!menuToggle || !mobileTabNav) return;
+  menuToggle.classList.remove("open");
+  mobileTabNav.classList.remove("open");
+  menuToggle.setAttribute("aria-expanded", "false");
+}
+
+if (menuToggle && mobileTabNav) {
+  menuToggle.addEventListener("click", () => {
+    const isOpen = mobileTabNav.classList.toggle("open");
+    menuToggle.classList.toggle("open", isOpen);
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!mobileTabNav.classList.contains("open")) return;
+    if (mobileTabNav.contains(e.target) || menuToggle.contains(e.target)) return;
+    closeMobileMenu();
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeMobileMenu();
+  });
+}
+
 /* Tabs — panel content fades in each time its tab is activated */
 const tabButtons = document.querySelectorAll(".tab-btn");
 const tabPanels = document.querySelectorAll(".tab-panel");
@@ -74,10 +103,19 @@ function activateTab(tabId, { scroll = true } = {}) {
 }
 
 tabButtons.forEach((btn) => {
-  btn.addEventListener("click", () => activateTab(btn.dataset.tab));
+  btn.addEventListener("click", () => {
+    activateTab(btn.dataset.tab);
+    closeMobileMenu();
+  });
 });
 
 activateTab("about", { scroll: false });
+
+document.querySelector(".brand").addEventListener("click", (e) => {
+  e.preventDefault();
+  activateTab("about");
+  closeMobileMenu();
+});
 
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
   link.addEventListener("click", (e) => {

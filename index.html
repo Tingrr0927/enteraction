@@ -23,12 +23,17 @@
 
 <header class="nav">
   <div class="nav-inner">
+    <button type="button" class="menu-toggle" aria-label="開啟選單" aria-expanded="false" aria-controls="tab-nav">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
     <a href="#top" class="brand">
       <img src="assets/logo.png" alt="ENTERACTION" class="brand-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex'">
       <span class="brand-fallback" style="display:none">EA</span>
       <span class="brand-name">ENTERACTION</span>
     </a>
-    <nav class="tab-nav">
+    <nav class="tab-nav" id="tab-nav">
       <button type="button" class="tab-btn active" data-tab="about" data-i18n="tabs.about">About</button>
       <span class="tab-divider" aria-hidden="true"></span>
       <button type="button" class="tab-btn" data-tab="activities" data-i18n="tabs.activities">Activities</button>

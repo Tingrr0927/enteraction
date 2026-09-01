@@ -149,6 +149,36 @@ img { max-width: 100%; display: block; }
   color: var(--brand-mid);
 }
 
+/* Mobile menu toggle — hidden on desktop, shown via the max-width media query below */
+.menu-toggle {
+  display: none;
+  order: 0;
+  flex-shrink: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--text);
+  transition: transform 0.25s ease, opacity 0.2s ease;
+}
+
+.menu-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.menu-toggle.open span:nth-child(2) { opacity: 0; }
+.menu-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
 /* Buttons */
 .btn {
   display: inline-flex;
@@ -686,9 +716,60 @@ img { max-width: 100%; display: block; }
 
 /* Responsive */
 @media (max-width: 720px) {
-  .nav-links { gap: 14px; }
+  .menu-toggle { display: flex; }
+  .brand { order: 1; }
+  .nav-links { display: none; }
+
+  /* On mobile the tab row becomes a dropdown menu triggered by .menu-toggle,
+     positioned relative to .nav (sticky, so it's the containing block) so it
+     spans the full header width regardless of .nav-inner's own padding. */
+  .tab-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    column-gap: 0;
+    row-gap: 2px;
+    margin-top: 0;
+    padding: 0 24px;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-8px);
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 16px 24px -8px rgba(15, 23, 60, 0.12);
+    transition: max-height 0.35s ease, opacity 0.25s ease, transform 0.25s ease, padding 0.35s ease;
+  }
+
+  .tab-nav.open {
+    max-height: 400px;
+    opacity: 1;
+    transform: translateY(0);
+    padding: 10px 24px 18px;
+  }
+
+  .nav.scrolled .tab-nav {
+    justify-content: flex-start;
+    column-gap: 0;
+    margin-top: 0;
+  }
+
+  .tab-divider { display: none; }
+
+  .tab-btn {
+    width: 100%;
+    text-align: left;
+    padding: 12px 2px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .tab-btn:last-child { border-bottom: none; }
+
   .hero { padding: 72px 20px 84px; }
-  .tab-nav { justify-content: flex-start; column-gap: 20px; }
   .row-item { gap: 18px; }
   .row-icon { width: 56px; height: 56px; }
   .row-icon svg { width: 22px; height: 22px; }
