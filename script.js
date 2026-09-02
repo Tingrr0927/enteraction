@@ -4,12 +4,26 @@ const navEl = document.querySelector(".nav");
 
 /* Shrink the header (logo + nav padding) once the page scrolls past the top.
    The tab row lives inside this same header and reflows via CSS (flex-wrap)
-   as it shrinks, so no separate height bookkeeping is needed. */
+   as it shrinks, so no separate height bookkeeping is needed.
+
+   Enter/exit use different thresholds (hysteresis) on purpose: the header
+   is sticky and still sits in normal flow, so collapsing it shortens the
+   whole document by ~35px. Right near the top, that shortening can clamp
+   window.scrollY back down past a single shared threshold, which removes
+   "scrolled", regrows the header, restores the scroll height, and lets the
+   next scroll frame cross the threshold again — an oscillation that reads
+   as the tab row jittering. Only exiting at the very top (scrollY <= 0)
+   makes that clamp unable to re-trigger the exit condition. */
 let navScrollTicking = false;
 
 function updateNavScrolledState() {
   if (!navEl) return;
-  navEl.classList.toggle("scrolled", window.scrollY > 24);
+  const isScrolled = navEl.classList.contains("scrolled");
+  if (!isScrolled && window.scrollY > 24) {
+    navEl.classList.add("scrolled");
+  } else if (isScrolled && window.scrollY <= 0) {
+    navEl.classList.remove("scrolled");
+  }
 }
 
 window.addEventListener("scroll", () => {
@@ -180,7 +194,6 @@ const translations = {
     "membership.line.desc": "習慣用 LINE 聊天嗎?掃描下方 QR Code 加入我們的社群。",
     "cta.title": "準備好開口了嗎?",
     "cta.body": "無論你的英文程度如何,只要想練習口說、認識新朋友,或對英語文化有興趣,都非常歡迎加入!<br>我們目前仍在規劃活動時間、使用平台及未來主題,之後也會邀請大家一起提供想法。<br>期待和大家一起開口說英文,把英文變成生活的一部分。",
-    "cta.button": "加入 Discord 社群",
     "footer.rights": "版權所有。",
   },
   en: {
@@ -236,7 +249,6 @@ const translations = {
     "membership.line.desc": "Prefer LINE for daily chat? Scan the QR code below to join our group.",
     "cta.title": "Ready to Speak Up?",
     "cta.body": "No matter your English level, if you want to practice speaking, meet new people, or explore English-speaking culture, you're very welcome to join!<br>We're still working out the schedule, platform, and future topics — and we'll invite everyone to help shape them.<br>We can't wait to speak English with you and make it a natural part of everyday life.",
-    "cta.button": "Join Our Discord",
     "footer.rights": "All rights reserved.",
   },
 };

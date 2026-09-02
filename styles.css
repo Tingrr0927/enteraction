@@ -661,7 +661,7 @@ img { max-width: 100%; display: block; }
 
 .cta p {
   color: rgba(255, 255, 255, 0.85);
-  margin: 0 0 32px;
+  margin: 0;
 }
 
 /* Footer */
@@ -676,6 +676,12 @@ img { max-width: 100%; display: block; }
   justify-content: space-between;
   font-size: 14px;
   color: var(--text-muted);
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
 .footer-inner a {
